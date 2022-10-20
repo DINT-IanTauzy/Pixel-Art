@@ -40,33 +40,29 @@
     <DockPanel >
         <GroupBox Header="Nuevo" DockPanel.Dock="Left">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button>Pequeño</Button>
-                <Button>Mediano</Button>
-                <Button>Grande</Button>
+                <Button Click="CambiarTamañoGrid" Tag="Pequeño">Pequeño</Button>
+                <Button Click="CambiarTamañoGrid" Tag="Mediano">Mediano</Button>
+                <Button Click="CambiarTamañoGrid" Tag="Grande">Grande</Button>
             </StackPanel>
         </GroupBox>
         <DockPanel DockPanel.Dock="Right" LastChildFill="False">
             <Border DockPanel.Dock="Top" Style="{StaticResource BorderDerecha}">
                 <StackPanel Style="{StaticResource PanelDerecha}">
-                    <RadioButton IsChecked="True">Negro</RadioButton>
-                    <RadioButton>Blanco</RadioButton>
-                    <RadioButton>Rojo</RadioButton>
-                    <RadioButton>Verde</RadioButton>
-                    <RadioButton>Azul</RadioButton>
-                    <RadioButton>Amarillo</RadioButton>
-                    <RadioButton>Naranja</RadioButton>
-                    <RadioButton>Rosa</RadioButton>
-                    <RadioButton>Personalizado</RadioButton>
+                    <RadioButton IsChecked="True" Checked="CambiarColorGrid" Tag="Negro">Negro</RadioButton>
+                    <RadioButton Tag="Blanco">Blanco</RadioButton>
+                    <RadioButton Tag="Rojo">Rojo</RadioButton>
+                    <RadioButton Tag="Verde">Verde</RadioButton>
+                    <RadioButton Tag="Azul">Azul</RadioButton>
+                    <RadioButton Tag="Amarillo">Amarillo</RadioButton>
+                    <RadioButton Tag="Naranja">Naranja</RadioButton>
+                    <RadioButton Tag="Rosa">Rosa</RadioButton>
+                    <RadioButton Tag="Personalizado">Personalizado</RadioButton>
                     <TextBox Margin="0,5" Height="25"></TextBox>
                 </StackPanel>
             </Border>
-            <Button DockPanel.Dock="Top">Rellenar</Button>
+            <Button DockPanel.Dock="Top" Click="RellenarGrid">Rellenar</Button>
             
         </DockPanel>
-        <Grid x:Name="PixelGrid" ShowGridLines="True" Margin="10">
-            
-            
-            
-        </Grid>
+        <Grid x:Name="PixelGrid" ShowGridLines="True" Margin="10"/>
     </DockPanel>
 </Window>
